@@ -14,8 +14,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Portfolio of Anshuman Singh",
+  title: "Anshuman Singh | C++ & Full-Stack Developer",
+  description:
+    "Portfolio of Anshuman Singh — Computer Science & Engineering undergraduate at NIT Patna. Specializing in Systems Programming (C++), high-performance networking, and full-stack web development.",
+  keywords: [
+    "Anshuman Singh",
+    "Portfolio",
+    "NIT Patna",
+    "C++ Developer",
+    "Systems Engineer",
+    "Full-Stack Developer",
+    "Software Engineer",
+  ],
 };
 
 export default function RootLayout({

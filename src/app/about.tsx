@@ -1,17 +1,25 @@
 export default function About() {
-    return (
-        <section className="flex flex-col md:flex-row mt-20 w-full gap-6 md:gap-0 animate-fade-in-up transition-all duration-500 hover:bg-muted/30 p-6 rounded-lg">
-            <div className="w-full md:w-1/4">
-                <h3 className="text-2xl font-semibold tracking-tight text-foreground/90">About</h3>
-            </div>
-            <div className="w-full md:w-3/4 text-foreground/80 leading-relaxed text-lg">
-                <p>
-                    Hi, I'm <span className="font-medium text-foreground">Anshuman Singh</span>, a Computer Science and Engineering student at NIT Patna. I'm passionate about building scalable software and user-friendly applications.
-                </p>
-                <p className="mt-4">
-                    With a solid foundation in data structures and algorithms, I enjoy turning complex logic into efficient, clean code. I'm currently sharpening my skills and am always looking for challenging projects to build and learn from.
-                </p>
-            </div>
-        </section>
-    );
+  return (
+    <section id="about" className="scroll-mt-20 space-y-4">
+      <h2 className="text-xl font-semibold tracking-tight text-foreground">
+        About
+      </h2>
+
+      <div className="space-y-3 text-sm sm:text-base text-foreground/80 leading-relaxed">
+        <p>
+          I'm an undergraduate studying Computer Science and Engineering at the{" "}
+          <span className="text-foreground font-medium">National Institute of Technology Patna (NIT Patna)</span>, currently holding an{" "}
+          <span className="text-foreground font-medium">8.3 CGPA</span>.
+        </p>
+
+        <p>
+          My interests center around systems engineering and how things work under the surface. I enjoy writing modern C++, working with Linux kernel primitives (namespaces, cgroups, process isolation), and building networking tools with POSIX sockets and multithreading.
+        </p>
+
+        <p>
+          On the application side, I build responsive, functional web apps using Next.js, TypeScript, and Tailwind CSS. I also actively solve algorithmic problems on LeetCode and Codeforces to keep my data structures and problem-solving skills sharp.
+        </p>
+      </div>
+    </section>
+  );
 }

@@ -1,41 +1,116 @@
-import { Badge } from "@/components/ui/badge";
-import { CodeXml, MapPin } from "lucide-react";
+import { MapPin, Mail, ArrowUpRight, Download } from "lucide-react";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiCodeforces } from "react-icons/si";
 
 export default function Profile() {
-    return (
-        <div className="flex flex-col items-center animate-fade-in-up mt-10">
-            <div className="relative group">
-                <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-border shadow-md">
-                    <img src="/anshuman.jpg" alt="Anshuman Singh" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                </div>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-extrabold mt-8 mb-3 tracking-tight text-foreground">Anshuman Singh</h1>
-            
-            <Badge variant="outline" className="text-sm my-2 h-8 px-4 rounded-full border-primary/30 bg-primary/10 text-primary gap-2 font-medium hover:bg-primary/20 transition-colors">
-                <span className="relative flex items-center justify-center h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75"></span>
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
-                </span>
-                Open to work
-            </Badge>
-            
-            <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-6">
-                <div className="flex items-center gap-x-2 text-foreground/80 font-medium bg-muted px-3 py-1.5 rounded-lg text-sm backdrop-blur-sm transition-colors hover:text-foreground hover:bg-muted/80 cursor-default">
-                    <CodeXml className="h-4 w-4 text-primary" /> Cpp Developer
-                </div>
-                <div className="flex items-center gap-x-2 text-foreground/80 font-medium bg-muted px-3 py-1.5 rounded-lg text-sm backdrop-blur-sm transition-colors hover:text-foreground hover:bg-muted/80 cursor-default">
-                    <MapPin className="h-4 w-4 text-primary" /> Prayagraj, UP
-                </div>
-                <Link href="https://www.linkedin.com/in/anshumansingh0010/" target="_blank" className="flex items-center gap-x-2 text-foreground/80 font-medium hover:text-primary transition-colors bg-muted px-3 py-1.5 rounded-lg text-sm backdrop-blur-sm hover:shadow-md hover:bg-accent border border-transparent">
-                    <FaLinkedin className="h-4 w-4" /> LinkedIn
-                </Link>
-                <Link href="https://github.com/anshumansingh0010" target="_blank" className="flex items-center gap-x-2 text-foreground/80 font-medium hover:text-primary transition-colors bg-muted px-3 py-1.5 rounded-lg text-sm backdrop-blur-sm hover:shadow-md hover:bg-accent border border-transparent">
-                    <FaGithub className="h-4 w-4" /> Github
-                </Link>
-            </div>
+  return (
+    <section className="flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-6 sm:gap-8 pt-4">
+      {/* Intro info */}
+      <div className="flex-1 space-y-3">
+        <div className="space-y-1">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+            Anshuman Singh
+          </h1>
+          <p className="text-base sm:text-lg text-muted-foreground font-medium">
+            CSE Student at NIT Patna · C++ & Full-Stack Developer
+          </p>
         </div>
-    )
+
+        <p className="text-sm sm:text-base text-foreground/80 leading-relaxed max-w-xl">
+          I'm passionate about understanding how computers work under the hood. Most of my work involves low-level systems programming in C++, Linux networking, and building responsive web apps with Next.js and TypeScript.
+        </p>
+
+        {/* Status & location metadata */}
+        <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground pt-1">
+          <div className="flex items-center gap-1.5">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span>Available for internships & roles</span>
+          </div>
+
+          <div className="flex items-center gap-1">
+            <MapPin className="w-3.5 h-3.5 text-muted-foreground" />
+            <span>Prayagraj, UP, India</span>
+          </div>
+        </div>
+
+        {/* Quick Social & Action Links */}
+        <div className="flex flex-wrap items-center gap-2 pt-2">
+          <a
+            href="/anshuman_resume.pdf"
+            download="Anshuman_Singh_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border bg-foreground text-background hover:opacity-90 text-xs font-medium transition-opacity bg-clip-padding"
+          >
+            <Download className="w-3.5 h-3.5" />
+            <span>Resume</span>
+          </a>
+
+          <Link
+            href="https://github.com/anshumansingh0010"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border bg-card hover:bg-muted text-xs font-medium text-foreground transition-colors"
+          >
+            <FaGithub className="w-3.5 h-3.5" />
+            <span>GitHub</span>
+          </Link>
+
+          <Link
+            href="https://www.linkedin.com/in/anshumansingh0010/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border bg-card hover:bg-muted text-xs font-medium text-foreground transition-colors"
+          >
+            <FaLinkedin className="w-3.5 h-3.5 text-[#0A66C2]" />
+            <span>LinkedIn</span>
+          </Link>
+
+          <Link
+            href="https://codeforces.com/profile/anshumansingh0010"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border bg-card hover:bg-muted text-xs font-medium text-foreground transition-colors"
+          >
+            <SiCodeforces className="w-3.5 h-3.5 text-blue-500" />
+            <span>Codeforces</span>
+          </Link>
+
+          <a
+            href="mailto:anshumansingh0010@gmail.com"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border bg-card hover:bg-muted text-xs font-medium text-foreground transition-colors"
+          >
+            <Mail className="w-3.5 h-3.5" />
+            <span>Email</span>
+          </a>
+
+          <a
+            href="#projects"
+            className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline px-2 py-1.5 ml-1"
+          >
+            <span>View projects</span>
+            <ArrowUpRight className="w-3 h-3" />
+          </a>
+        </div>
+      </div>
+
+      {/* Clean Avatar */}
+      <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-border/80 shadow-md shrink-0 bg-muted">
+        <img
+          src="/anshuman.jpg"
+          alt="Anshuman Singh"
+          className="w-full h-full object-cover dark:hidden"
+        />
+        <img
+          src="/anshuman-dark.jpg"
+          alt="Anshuman Singh"
+          className="w-full h-full object-cover hidden dark:block"
+        />
+      </div>
+    </section>
+  );
 }
