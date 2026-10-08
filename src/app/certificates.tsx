@@ -12,7 +12,7 @@ export default function Certificates() {
       <div className="space-y-3 text-sm text-foreground/80 leading-relaxed">
         <ul className="space-y-2 list-disc list-inside text-foreground/80">
           <li>
-            Solved <span className="font-semibold text-foreground">200+ problems</span> across LeetCode & Codeforces focusing on data structures, graphs, and dynamic programming.
+            Solved <span className="font-semibold text-foreground">500+ problems</span> across LeetCode & Codeforces focusing on data structures, graphs, and dynamic programming.
           </li>
           <li>
             Maintaining an <span className="font-semibold text-foreground">8.3 CGPA</span> in Computer Science & Engineering at NIT Patna.
