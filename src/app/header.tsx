@@ -43,15 +43,6 @@ export default function Header() {
         >
           Contact
         </a>
-        <a
-          href="/anshuman_resume.pdf"
-          download="Anshuman_Singh_Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-foreground transition-colors font-medium text-foreground"
-        >
-          Resume
-        </a>
         <ThemeToggle />
       </nav>
     </header>
